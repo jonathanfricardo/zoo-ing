@@ -17,26 +17,21 @@ public class Zoo {
                 new Zebra("marty"),
                 new Monkey("ricard"),
                 new Otter("lila")
-
         );
 
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-
             System.out.print("Voer uw command in: ");
             String input = scanner.nextLine();
 
             if (input.equals("exit")) {
                 break;
             } else if (input.equals("hello")) {
-
                 for (Animal animal : animals) {
                     animal.sayHello();
                 }
-
             } else if (input.startsWith("hello ")) {
-
                 String name = input.substring("hello ".length());
                 boolean found = false;
 
@@ -50,28 +45,22 @@ public class Zoo {
                 if (!found) {
                     System.out.println("Geen dier gevonden met de naam: " + name);
                 }
-
-            } else if (input.equals("give leaves")){
-
+            } else if (input.equals("give leaves")) {
                 for (Animal animal : animals) {
                     if (animal instanceof Herbivore) {
-                        ((Herbivore)animal).eatLeaves();
+                        ((Herbivore) animal).eatLeaves();
                     }
                 }
-
             } else if (input.equals("give meat")) {
-                
                 for (Animal animal : animals) {
                     if (animal instanceof Carnivore) {
-                        ((Carnivore)animal).eatMeat();
+                        ((Carnivore) animal).eatMeat();
                     }
                 }
-
             } else if (input.equals("perform trick")) {
-                
                 for (Animal animal : animals) {
                     if (animal instanceof TrickPerformer) {
-                        ((TrickPerformer)animal).performTrick();
+                        ((TrickPerformer) animal).performTrick();
                     }
                 }
             } else {
