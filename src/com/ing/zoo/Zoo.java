@@ -1,38 +1,44 @@
 package com.ing.zoo;
 
+import com.ing.zoo.animals.*;
+import com.ing.zoo.behavivour.*;
+
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+
+
 
 public class Zoo {
     public static void main(String[] args)
     {
-        String[] commands = new String[4];
-        commands[0] = "hello";
-        commands[1] = "give leaves";
-        commands[2] = "give meat";
-        commands[3] = "perform trick";
+      List<Animal> animals = Arrays.asList(
+        new Lion("henk"),
+        new Hippo("elsa"),
+        new Pig("dora"),
+        new Tiger("wally"),
+        new Zebra("marty")
+        
+      );
 
-        Lion henk = new Lion();
-        henk.name = "henk";
-        Hippo elsa = new Hippo();
-        elsa.name = "elsa";
-        Pig dora = new Pig();
-        dora.name = "dora";
-        Tiger wally = new Tiger();
-        wally.name = "wally";
-        Zebra marty = new Zebra();
-        marty.name = "marty";
+      Scanner scanner = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
+      while (true) {
         System.out.print("Voer uw command in: ");
-
         String input = scanner.nextLine();
-        if(input.equals(commands[0] + " henk"))
-        {
-            henk.sayHello();
+
+        if (input.equals("exit")) {
+            break;
+        } else if (input.equals("hello")) {
+            for (Animal animal : animals) {
+                animal.sayHello();
+            }
+        } else if (input.startsWith("hello ")) {
+            String name = input.substring("hello ".length());
+
+        } else {
+            System.out.println("Onbekend command: "+ input);
         }
-        else
-        {
-            System.out.println("Unknown command: " + input);
-        }
+      }
     }
 }
