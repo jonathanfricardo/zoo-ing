@@ -57,6 +57,16 @@ public class Zoo {
                     }
                 }
 
+            } else if (input.equals("give meat")) {
+                
+                for (Animal animal : animals) {
+                    if (animal instanceof Carnivore) {
+                        ((Carnivore)animal).eatMeat();
+                    }
+                }
+
+            } else if () {
+                
             } else {
                 System.out.println("Onbekend command: " + input);
             }
