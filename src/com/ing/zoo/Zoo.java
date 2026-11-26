@@ -15,7 +15,8 @@ public class Zoo {
                 new Pig("dora"),
                 new Tiger("wally"),
                 new Zebra("marty"),
-                new Monkey("ricard")
+                new Monkey("ricard"),
+                new Otter("lila")
 
         );
 
