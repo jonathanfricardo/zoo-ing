@@ -6,48 +6,34 @@ import com.ing.zoo.behaviour.Carnivore;
 import com.ing.zoo.behaviour.Herbivore;
 import com.ing.zoo.behaviour.TrickPerformer;
 
-public class Monkey extends Animal implements Carnivore, Herbivore, TrickPerformer{
-        public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
+public class Monkey extends Animal implements Carnivore, Herbivore, TrickPerformer {
 
-    public Monkey(String name)
-    {
+    public Monkey(String name) {
         super(name);
     }
 
-    public void sayHello()
-    {
-        helloText = "oeh oeh aah aah";
-        System.out.println(helloText);
+    @Override
+    public void sayHello() {
+        System.out.println("oeh oeh aah aah");
     }
 
-    public void eatLeaves()
-    {
-        eatText = "munch munch bleh oeh aah";
-        System.out.println(eatText);
+    @Override
+    public void eatLeaves() {
+        System.out.println("munch munch bleh oeh aah");
     }
 
-    public void eatMeat()
-    {
-        eatText = "nomnomnom whoop whooooop";
-        System.out.println(eatText);
+    @Override
+    public void eatMeat() {
+        System.out.println("nomnomnom whoop whooooop");
     }
 
-    public void performTrick()
-    {
+    @Override
+    public void performTrick() {
         Random random = new Random();
-        int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
-            trick = "*throws banana peel* slips and dies...";
+        if (random.nextInt(2) == 0) {
+            System.out.println("*throws banana peel* slips and dies...");
+        } else {
+            System.out.println("*throws banana peel* perfect salto and lands");
         }
-        else
-        {
-            trick = "*throws banana peel* perfect salto and lands";
-        }
-        System.out.println(trick);
     }
-    
 }

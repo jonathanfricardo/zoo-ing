@@ -7,46 +7,33 @@ import com.ing.zoo.behaviour.Herbivore;
 import com.ing.zoo.behaviour.TrickPerformer;
 
 public class Pig extends Animal implements Carnivore, Herbivore, TrickPerformer {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
 
-    public Pig(String name)
-    {
+    public Pig(String name) {
         super(name);
     }
 
-    public void sayHello()
-    {
-        helloText = "splash";
-        System.out.println(helloText);
+    @Override
+    public void sayHello() {
+        System.out.println("splash");
     }
 
-    public void eatLeaves()
-    {
-        eatText = "munch munch oink";
-        System.out.println(eatText);
+    @Override
+    public void eatLeaves() {
+        System.out.println("munch munch oink");
     }
 
-    public void eatMeat()
-    {
-        eatText = "nomnomnom oink thx";
-        System.out.println(eatText);
+    @Override
+    public void eatMeat() {
+        System.out.println("nomnomnom oink thx");
     }
 
-    public void performTrick()
-    {
+    @Override
+    public void performTrick() {
         Random random = new Random();
-        int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
-            trick = "rolls in the mud";
+        if (random.nextInt(2) == 0) {
+            System.out.println("rolls in the mud");
+        } else {
+            System.out.println("runs in circles");
         }
-        else
-        {
-            trick = "runs in circles";
-        }
-        System.out.println(trick);
     }
 }

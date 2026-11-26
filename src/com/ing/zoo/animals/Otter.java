@@ -5,42 +5,29 @@ import java.util.Random;
 import com.ing.zoo.behaviour.Carnivore;
 import com.ing.zoo.behaviour.TrickPerformer;
 
-public class Otter extends Animal implements Carnivore, TrickPerformer{
-        public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
+public class Otter extends Animal implements Carnivore, TrickPerformer {
 
-    public Otter(String name)
-    {
+    public Otter(String name) {
         super(name);
     }
 
-    public void sayHello()
-    {
-        helloText = "squeek squeeeeek";
-        System.out.println(helloText);
+    @Override
+    public void sayHello() {
+        System.out.println("squeek squeeeeek");
     }
 
-    public void eatMeat()
-    {
-        eatText = "nomnomnom chuckle purr";
-        System.out.println(eatText);
+    @Override
+    public void eatMeat() {
+        System.out.println("nomnomnom chuckle purr");
     }
 
-    public void performTrick()
-    {
+    @Override
+    public void performTrick() {
         Random random = new Random();
-        int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
-            trick = "swims through inflatable rubber ring";
+        if (random.nextInt(2) == 0) {
+            System.out.println("swims through inflatable rubber ring");
+        } else {
+            System.out.println("jumps out the water ands starts to break dance");
         }
-        else
-        {
-            trick = "jumps out the water ands starts to break dance";
-        }
-        System.out.println(trick);
     }
-    
 }

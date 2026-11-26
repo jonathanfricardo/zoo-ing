@@ -6,40 +6,28 @@ import com.ing.zoo.behaviour.Carnivore;
 import com.ing.zoo.behaviour.TrickPerformer;
 
 public class Tiger extends Animal implements Carnivore, TrickPerformer {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
 
-    public Tiger(String name)
-    {
+    public Tiger(String name) {
         super(name);
     }
 
-    public void sayHello()
-    {
-        helloText = "rraaarww";
-        System.out.println(helloText);
+    @Override
+    public void sayHello() {
+        System.out.println("rraaarww");
     }
 
-    public void eatMeat()
-    {
-        eatText = "nomnomnom oink wubalubadubdub";
-        System.out.println(eatText);
+    @Override
+    public void eatMeat() {
+        System.out.println("nomnomnom oink wubalubadubdub");
     }
 
-    public void performTrick()
-    {
+    @Override
+    public void performTrick() {
         Random random = new Random();
-        int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
-            trick = "jumps in tree";
+        if (random.nextInt(2) == 0) {
+            System.out.println("jumps in tree");
+        } else {
+            System.out.println("scratches ears");
         }
-        else
-        {
-            trick = "scratches ears";
-        }
-        System.out.println(trick);
     }
 }

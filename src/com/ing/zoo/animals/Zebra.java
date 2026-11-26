@@ -4,26 +4,19 @@ import java.util.Random;
 
 import com.ing.zoo.behaviour.Herbivore;
 
-public class Zebra extends Animal implements Herbivore{
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
+public class Zebra extends Animal implements Herbivore {
 
-    public Zebra(String name)
-    {
+    public Zebra(String name) {
         super(name);
     }
 
-    public void sayHello()
-    {
-        helloText = "zebra zebra";
-        System.out.println(helloText);
+    @Override
+    public void sayHello() {
+        System.out.println("zebra zebra");
     }
 
-    public void eatLeaves()
-    {
-        eatText = "munch munch zank yee bra";
-        System.out.println(eatText);
+    @Override
+    public void eatLeaves() {
+        System.out.println("munch munch zank yee bra");
     }
 }
