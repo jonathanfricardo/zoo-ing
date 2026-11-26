@@ -49,6 +49,14 @@ public class Zoo {
                     System.out.println("Geen dier gevonden met de naam: " + name);
                 }
 
+            } else if (input.equals("give leaves")){
+
+                for (Animal animal : animals) {
+                    if (animal instanceof Herbivore) {
+                        ((Herbivore)animal).eatLeaves();
+                    }
+                }
+
             } else {
                 System.out.println("Onbekend command: " + input);
             }
