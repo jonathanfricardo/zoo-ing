@@ -27,7 +27,7 @@ public class Otter extends Animal implements Carnivore, TrickPerformer {
         if (random.nextInt(2) == 0) {
             System.out.println("swims through inflatable rubber ring");
         } else {
-            System.out.println("jumps out the water ands starts to break dance");
+            System.out.println("jumps out of the water and starts to break dance");
         }
     }
 }

@@ -1,7 +1,5 @@
 package com.ing.zoo.animals;
 
-import java.util.Random;
-
 import com.ing.zoo.behaviour.Herbivore;
 
 public class Zebra extends Animal implements Herbivore {

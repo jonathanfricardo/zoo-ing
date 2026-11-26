@@ -14,7 +14,7 @@ public class Pig extends Animal implements Carnivore, Herbivore, TrickPerformer 
 
     @Override
     public void sayHello() {
-        System.out.println("splash");
+        System.out.println("oink oink");
     }
 
     @Override
