@@ -2,8 +2,8 @@ package com.ing.zoo.animals;
 
 import java.util.Random;
 
-import com.ing.zoo.behavivour.Carnivore;
-import com.ing.zoo.behavivour.TrickPerformer;
+import com.ing.zoo.behaviour.Carnivore;
+import com.ing.zoo.behaviour.TrickPerformer;
 
 public class Tiger extends Animal implements Carnivore, TrickPerformer {
     public String name;

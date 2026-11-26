@@ -1,6 +1,6 @@
 package com.ing.zoo.animals;
 
-import com.ing.zoo.behavivour.Carnivore;
+import com.ing.zoo.behaviour.Carnivore;
 
 public class Lion extends Animal implements Carnivore{
     public String name;

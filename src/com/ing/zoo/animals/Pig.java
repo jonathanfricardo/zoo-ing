@@ -2,9 +2,9 @@ package com.ing.zoo.animals;
 
 import java.util.Random;
 
-import com.ing.zoo.behavivour.Carnivore;
-import com.ing.zoo.behavivour.Herbivore;
-import com.ing.zoo.behavivour.TrickPerformer;
+import com.ing.zoo.behaviour.Carnivore;
+import com.ing.zoo.behaviour.Herbivore;
+import com.ing.zoo.behaviour.TrickPerformer;
 
 public class Pig extends Animal implements Carnivore, Herbivore, TrickPerformer {
     public String name;

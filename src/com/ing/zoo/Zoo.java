@@ -1,7 +1,7 @@
 package com.ing.zoo;
 
 import com.ing.zoo.animals.*;
-import com.ing.zoo.behavivour.*;
+import com.ing.zoo.behaviour.*;
 
 import java.util.Arrays;
 import java.util.List;
