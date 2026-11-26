@@ -65,8 +65,13 @@ public class Zoo {
                     }
                 }
 
-            } else if () {
+            } else if (input.equals("perform trick")) {
                 
+                for (Animal animal : animals) {
+                    if (animal instanceof TrickPerformer) {
+                        ((TrickPerformer)animal).performTrick();
+                    }
+                }
             } else {
                 System.out.println("Onbekend command: " + input);
             }
